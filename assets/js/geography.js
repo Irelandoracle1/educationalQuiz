@@ -81,8 +81,8 @@ let submitButton=document.getElementById('submit');
 //this function diplays questions and answers
 //from a loop
  function displayQuestions(questions, quizcontainer){
-  var displayOutput=[];
-  var mathAnswers;
+  let displayOutput=[];
+  let mathAnswers;
 try{
 for(let i=0; i<=questions.length; i++){
     mathAnswers=[];
@@ -107,10 +107,10 @@ for(let i=0; i<=questions.length; i++){
 //once the get quiz result button is clicked
 function displayResults(questions, quizcontainer, scorecontainer){
   //grab all the answers div
- var userAnswerContainers=quizcontainer.querySelectorAll('.answers');
+ let userAnswerContainers=quizcontainer.querySelectorAll('.answers');
  
  //track users answers
- var userAnswer="";
+ let userAnswer="";
  //initilize the right answers
  let numberOfCorrectAnswers=0;
 
