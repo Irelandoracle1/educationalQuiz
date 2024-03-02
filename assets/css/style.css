@@ -1,4 +1,103 @@
-body{
-    color:red;
-    
+* {
+    text-align: center;
 }
+
+body {
+   background-color: #04AA6D;
+}
+
+section {
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 905px;
+
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+    width:150px;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: yellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  #main-quiz{ width:1000px;
+    margin: auto;
+  }
+  @media screen and (max-width: 950px){
+ #main-quiz{ background-color:red; max-width:300px;}
+ li{display:block; float:left;}
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #333;
+  width: 150px;
+
+}
+li{
+  text-align:center;
+}
+  }
+  @media screen and (max-width: 1200px){
+    #main-quiz{ background-color:red; max-width:300px;}
+    li{display:block; float:left;}
+   ul {
+     list-style-type: none;
+     padding: 0;
+     background-color: #333;
+     width: 150px;
+   
+   }
+   li{
+     text-align:center;
+   }
+     }
+  #quiz{color:black;}
+
+  .radio-button{
+    display: table;
+  }
+   .answers{
+    max-width:150px;
+    margin: auto;
+  }
+  span{
+    position:relative;
+    top:-16px;
+    left: 15px;
+    text-align: center;
+  } 
+body.home ul li.home,
+body.maths ul li.maths,
+body.science ul li.science,
+body.geography ul li.geography,
+body.literary ul li.literary,
+body.sports ul li.sports
+ {
+
+background-color: #04AA6D;
+}
+  
