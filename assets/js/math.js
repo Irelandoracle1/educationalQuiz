@@ -137,7 +137,7 @@ function displayQuestions(questions, quizcontainer){
    if(userAnswer===questions[v].rightAnswer){
       numberOfCorrectAnswers++;
        //add correct answer image
-       userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.jpg'>";
+       userAnswerContainers[v].innerHTML="<img src='assets/images/img/right.png'>";
   
    }else if(userAnswer==null || userAnswer=="undefined"){
       userAnswerContainers[v].innerHTML="<i style='color:orange;'>Choose an answer</i>";
