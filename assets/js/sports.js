@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //in an array of obejects
 let mathQuestions = [
     {
-        question: "Jurgen Klopp began his manegeral career ayt which German club",
+        question: "Jurgen Klopp began his manegeral career at which German club",
         answer: {
             a: "Mainz 05",
             b: "Mainz 07",
