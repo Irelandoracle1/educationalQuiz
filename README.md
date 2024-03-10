@@ -1,6 +1,6 @@
 # Educational quiz
 Educational Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Educational Quiz App.
-![Responsive Pages](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/jollyquizhomepage.png)
+![Responsive Pages](https://github.com/Irelandoracle1/educationalQuiz/blob/main/assets/images/img/quiz1.PNG)
 
 ### Existing Features
 
