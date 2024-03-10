@@ -1,39 +1,57 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Educational quiz
+Educational Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Jolly Quiz App.
+![Responsive Pages](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/jollyquizhomepage.png)
 
-Welcome,
+### Existing Features
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- __Navigation Bar__
+           -Jolly Quiz features a responsive navigagtion bar with links to the pages of the different subject's quiz
+           -With the Navigation Bar, you can easily navigate from one particular subject's quiz to the other.
+           ![Navigation Bar](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiznav.png)
+  ## The Home Page
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+    The home page (landing page) gives a textual overview of the Jolly Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
+   ![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiz1.png)
 
-## Codeanywhere Reminders
+   ## Quiz Pages
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+    Educational Quiz features quiz on the following subjects: Mathematics, Literary, Geography, Science and Sports. 
+    Each Subject's quiz are featured in their own unique pages in the Web Application
+    Each subject's quiz features five questions with 4 options to choose from
+    After the user has selected answers to each questions and clicked the submit button, immediately, he receives his score for that subject with images to display the right and wrong answers so the user immediately sees his result in unconfusing manner.
+    ![Quiz Sample](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/gamesexample.png)
 
-`python3 -m http.server`
+- __Validator Testing__
+      -HTML
+      No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Firelandoracle1.github.io%2Fquizproject%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+   -CSS No errors were found when passing through the official
+   [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjigsaw.w3.org%2Fcss-validator%2Fvalidator%3Furi%3Dhttps%253A%252F%252Firelandoracle1.github.io%252Fquizproject%252F%26profile%3Dcss3svg%26usermedium%3Dall%26warning%3D1%26vextwarning%3D%26lang%3Den&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+   -The Javascript code was validated through jshint.com with no error report or warnings.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Unfixed Bug
+The letters of the quiz options in the different quiz pages could not be properly aligned because 
+the HTML span element used for holding the option answers, does not respond to perfect alignment.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+## Deployment
 
-`http_server`
+- The site was deployed to GitHub pages. The steps for the deployment are as follows: 
+  - In the GitHub repository, I navigated to the Settings tab 
+  - From the source section drop-down menu, I select the Master Branch
+  - Once the master branch has been selected, the page was automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The live link can be found here -https://irelandoracle1.github.io/quizproject/
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Credits 
 
-To log into the Heroku toolbelt CLI:
+### Content 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-  Instructions on how to implement the quiz logic with Javascript  was taken from  the tutorial at
+      [This Quiz Tutorial](https://simplestepscode.com/javascript-quiz-tutorial/)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+### Media
+  -Font Awesome Icons were used for the Home Page Menu Links
+  -The image used to indicate right answers were taken from this wikipedia 
+ [Creative Commons Image Site](https://commons.wikimedia.org/wiki/Category:Check_marks)
+  -The image used to indicate wrong answers were taken from this  
+[wikipedia creative Commons image site](https://commons.wikimedia.org/wiki/Category:Red_X_icons)
