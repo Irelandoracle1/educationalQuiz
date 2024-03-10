@@ -11,7 +11,7 @@ Educational Quiz is a Web Application developed to help people assess themselves
   ## The Home Page
 
     The home page (landing page) gives a textual overview of the Educational Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
-   ![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiz1.png)
+   ![home page](https://github.com/Irelandoracle1/educationalQuiz/blob/main/assets/images/img/quizhomepage.PNG)
 
    ## Quiz Pages
 
