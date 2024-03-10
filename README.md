@@ -7,7 +7,7 @@ Educational Quiz is a Web Application developed to help people assess themselves
 - __Navigation Bar__
            -Educational Quiz features a responsive navigagtion bar with links to the pages of the different subject's quiz
            -With the Navigation Bar, you can easily navigate from one particular subject's quiz to the other.
-           ![Navigation Bar](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiznav.png)
+           ![Navigation Bar](https://github.com/Irelandoracle1/educationalQuiz/blob/main/assets/images/img/navbarquiz.PNG)
   ## The Home Page
 
     The home page (landing page) gives a textual overview of the Educational Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
