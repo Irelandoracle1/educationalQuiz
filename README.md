@@ -1,16 +1,16 @@
 # Educational quiz
-Educational Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Jolly Quiz App.
+Educational Quiz is a Web Application developed to help people assess themselves on their knowledge of different subject matters in an interactive and entertaining manner.The Application is targetted at people looking for a fun way to assess themselves on their knowledge of different subjects. Any edutainment lover, will definitely fall in love with Educational Quiz App.
 ![Responsive Pages](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/jollyquizhomepage.png)
 
 ### Existing Features
 
 - __Navigation Bar__
-           -Jolly Quiz features a responsive navigagtion bar with links to the pages of the different subject's quiz
+           -Educational Quiz features a responsive navigagtion bar with links to the pages of the different subject's quiz
            -With the Navigation Bar, you can easily navigate from one particular subject's quiz to the other.
            ![Navigation Bar](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiznav.png)
   ## The Home Page
 
-    The home page (landing page) gives a textual overview of the Jolly Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
+    The home page (landing page) gives a textual overview of the Educational Quiz App and summarizes how it works, in order to help users quickly have an understanding of what to expect from the Application.
    ![home page](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/quiz1.png)
 
    ## Quiz Pages
