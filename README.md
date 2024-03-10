@@ -19,7 +19,7 @@ Educational Quiz is a Web Application developed to help people assess themselves
     Each Subject's quiz are featured in their own unique pages in the Web Application
     Each subject's quiz features five questions with 4 options to choose from
     After the user has selected answers to each questions and clicked the submit button, immediately, he receives his score for that subject with images to display the right and wrong answers so the user immediately sees his result in unconfusing manner.
-    ![Quiz Sample](https://github.com/Irelandoracle1/quizproject/blob/master/assets/images/gamesexample.png)
+    ![Quiz Sample](https://github.com/Irelandoracle1/educationalQuiz/blob/main/assets/images/img/gamepagequiz.PNG)
 
 - __Validator Testing__
       -HTML
