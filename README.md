@@ -39,7 +39,7 @@ the HTML span element used for holding the option answers, does not respond to p
   - From the source section drop-down menu, I select the Master Branch
   - Once the master branch has been selected, the page was automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here -https://irelandoracle1.github.io/quizproject/
+The live link can be found here -https://irelandoracle1.github.io/educationalQuiz/
 
 
 ## Credits 
