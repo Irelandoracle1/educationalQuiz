@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 //first step: store questions, answers options
 //in an array of obejects
 let mathQuestions = [
@@ -23,7 +21,6 @@ let mathQuestions = [
             b: "County Dublin",
             c: "County  Louth",
             d: "County Cork",
-
         },
         rightAnswer: "c"
     },
@@ -68,7 +65,6 @@ let mathQuestions = [
         rightAnswer: "d"
     },
 ];
-
 // second step: store all dom containers in a variable
 let scoreContainer = document.getElementById('score');
 let quizContainer = document.getElementById('quiz');
@@ -104,12 +100,10 @@ function displayQuestions(questions, quizcontainer) {
 function displayResults(questions, quizcontainer, scorecontainer) {
     //grab all the answers div
     let userAnswerContainers = quizcontainer.querySelectorAll('.answers');
-
     //track users answers
     let userAnswer = "";
     //initilize the right answers
     let numberOfCorrectAnswers = 0;
-
     for (let v = 0; v <= questions.length - 1; v++) {
         userAnswer = (userAnswerContainers[v].querySelector('input[name=question' + v + ']:checked') || {}).value;
         if (userAnswer === questions[v].rightAnswer) {
@@ -127,6 +121,6 @@ function displayResults(questions, quizcontainer, scorecontainer) {
 }
 //call to the dsiplay question function
 displayQuestions(mathQuestions, quizContainer);
-submitButton.onclick = function () {
+submitButton.addEventListener("click", function () {
     displayResults(mathQuestions, quizContainer, scoreContainer);
-};
+});
