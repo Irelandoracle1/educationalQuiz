@@ -3,8 +3,11 @@
 }
 
 body {
-   background-color: #04AA6D;
-}
+  background-color: #9da13172;
+} 
+
+
+
 
 section {
     text-align: center;
@@ -17,7 +20,7 @@ ul {
     margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color:red;
     width: 905px;
 
   }
@@ -98,6 +101,6 @@ body.literary ul li.literary,
 body.sports ul li.sports
  {
 
-background-color: #04AA6D;
+background-color: #04aa0c3f;
 }
   
