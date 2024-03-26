@@ -69,26 +69,25 @@ let mathQuestions = [
 let scoreContainer = document.getElementById('score');
 let quizContainer = document.getElementById('quiz');
 let submitButton = document.getElementById('submit');
-//step three: create  a quiz display function
-//this function diplays questions and answers
-//from a loop
+
 //step three: create  a quiz display function
 //this function diplays questions and answers
 //from a loop
 function displayQuestions(questions, quizcontainer) {
-    var displayOutput = [];
-    var mathAnswers;
+    let displayOutput = [];
+    let mathAnswers;
     try {
-        for (var i = 0; i <= questions.length; i++) {
+        for (let i = 0; i <= questions.length; i++) {
             mathAnswers = [];
 
-            for (var letter in questions[i].answer) {
+            for (let letter in questions[i].answer) {
                 if (questions[i].answer !== null) {
                     mathAnswers.push(
                         '<div>' +
                         '<input type="radio" class="radio-button" name="question' + i + '" value="' + letter + '">' + '<span>' + letter + " : " + questions[i].answer[letter] + '</span>' + '</div>');
                 }
             } //this the end of the answers loop
+
             displayOutput.push(
                 '<div class="question">' + questions[i].question + '</div>' + '<div class="answers">' + mathAnswers.join('') + '</div>'
             );
@@ -99,29 +98,33 @@ function displayQuestions(questions, quizcontainer) {
 // this function helps us to display answers
 //once the get quiz result button is clicked
 function displayResults(questions, quizcontainer, scorecontainer) {
-    //grab all the answers div
-    var userAnswerContainers = quizcontainer.querySelectorAll('.answers');
-    //track users answers
-    var userAnswer = "";
-    //initilize the right answers
-    var numberOfCorrectAnswers = 0;
-    for (var v = 0; v <= questions.length - 1; v++) {
-        userAnswer = (userAnswerContainers[v].querySelector('input[name=question' + v + ']:checked') || {}).value;
-        if (userAnswer === questions[v].rightAnswer) {
-            numberOfCorrectAnswers++;
-            //add correct answer image
-            userAnswerContainers[v].innerHTML = "<img src='assets/images/img/right.png'>";
-        } else if (userAnswer == null || userAnswer == "undefined") {
+    // Grab all the answer containers
+    let userAnswerContainers = quizcontainer.querySelectorAll('.answers');
+    // Track users' answers
+    let userAnswer = "";
+    // Initialize the number of correct answers
+    let numberOfCorrectAnswers = 0;
+    for (let v = 0; v < questions.length; v++) {
+        // Check if any radio button is checked
+        let checkedRadioButton = userAnswerContainers[v].querySelector('input[name=question' + v + ']:checked');
+        if (checkedRadioButton !== null) {
+            userAnswer = checkedRadioButton.value;
+            if (userAnswer === questions[v].rightAnswer) {
+                numberOfCorrectAnswers++;
+                userAnswerContainers[v].innerHTML = "<img src='assets/images/img/right.png'>";
+            } else {
+                userAnswerContainers[v].innerHTML = "<img src='assets/images/img/wrong.png'>";
+            }
+        } else {
+            // If no answer is selected, display a message
             userAnswerContainers[v].innerHTML = "<i style='color:orange;'>Choose an answer</i>";
         }
-        else {
-            userAnswerContainers[v].innerHTML = "<img src='assets/images/img/wrong.png'>";
-        }
     }
+    // Display the score
     scorecontainer.innerHTML = numberOfCorrectAnswers + "/" + questions.length;
 }
 //call to the dsiplay question function
 displayQuestions(mathQuestions, quizContainer);
 submitButton.addEventListener("click", function () {
-    displayResults(mathQuestions, quizContainer, scoreContainer);
+    displayResults(questions, quizcontainer, scorecontainer) ;
 });
