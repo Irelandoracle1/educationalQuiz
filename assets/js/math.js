@@ -1,25 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You played Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You played ${gameType}`);
-            }
-        });
-    }
+    // for (let button of buttons) {
+    //     button.addEventListener("click", function () {
+    //         if (this.getAttribute("data-type") === "submit") {
+    //             alert("You played Submit!");
+    //         } else {
+    //             let gameType = this.getAttribute("");
+    //             alert(`You played ${gameType}`);
+    //         }
+    //     });
+    // }
 });
+
 let mathQuestions = [
     {
         question: "What is the value of 45/9",
         answer: {
-            a: 6,
-            b: 8,
-            c: 5,
-            d: 3
+            "a": 6,
+            "b": 8,
+            "c": 5,
+            "d": 3
         },
         rightAnswer: "c"
 
@@ -27,10 +28,10 @@ let mathQuestions = [
     {
         question: "What is the value of 50/5",
         answer: {
-            a: 2,
-            b: 10,
-            c: 2,
-            d: 7
+            "a": 2,
+            "b": 10,
+            "c": 2,
+            "d": 7
         },
         rightAnswer: "b"
     },
@@ -64,67 +65,81 @@ let mathQuestions = [
         },
         rightAnswer: "d"
     },
+    
 ]
-// second step: store all dom containers in a variable
-let scoreContainer = document.getElementById('score');
-let quizContainer = document.getElementById('quiz');
-let submitButton = document.getElementById('submit');
 
-//step three: create  a quiz display function
-//this function diplays questions and answers
-//from a loop
-function displayQuestions(questions, quizcontainer) {
-    let displayOutput = [];
-    let mathAnswers;
-    try {
-        for (let i = 0; i <= questions.length; i++) {
-            mathAnswers = [];
+let currentQuestionIndex = 0;
+let userScore = 0;
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const submitButton = document.getElementById("submit-btn");
+const resultContainer = document.getElementById("result-container");
+const resultList = document.getElementById("result-list");
+const userScoreDisplay = document.getElementById("user-score")
 
-            for (let letter in questions[i].answer) {
-                if (questions[i].answer !== null) {
-                    mathAnswers.push(
-                        '<div>' +
-                        '<input type="radio" class="radio-button" name="question' + i + '" value="' + letter + '">' + '<span>' + letter + " : " + questions[i].answer[letter] + '</span>' + '</div>');
-                }
-            } //this the end of the answers loop
 
-            displayOutput.push(
-                '<div class="question">' + questions[i].question + '</div>' + '<div class="answers">' + mathAnswers.join('') + '</div>'
-            );
-            quizcontainer.innerHTML = displayOutput.join('');
-        } //end of main for loop
-    } catch (e) { }
-}
-// this function helps us to display answers
-//once the get quiz result button is clicked
-function displayResults(questions, quizcontainer, scorecontainer) {
-    // Grab all the answer containers
-    let userAnswerContainers = quizcontainer.querySelectorAll('.answers');
-    // Track users' answers
-    let userAnswer = "";
-    // Initialize the number of correct answers
-    let numberOfCorrectAnswers = 0;
-    for (let v = 0; v < questions.length; v++) {
-        // Check if any radio button is checked
-        let checkedRadioButton = userAnswerContainers[v].querySelector('input[name=question' + v + ']:checked');
-        if (checkedRadioButton !== null) {
-            userAnswer = checkedRadioButton.value;
-            if (userAnswer === questions[v].rightAnswer) {
-                numberOfCorrectAnswers++;
-                userAnswerContainers[v].innerHTML = "<img src='assets/images/img/right.png'>";
-            } else {
-                userAnswerContainers[v].innerHTML = "<img src='assets/images/img/wrong.png'>";
-            }
-        } else {
-            // If no answer is selected, display a message
-            userAnswerContainers[v].innerHTML = "<i style='color:orange;'>Choose an answer</i>";
+function renderQuestion() {
+    // document.getElementById("question-container").hidden = false;
+    const currentQuestion = mathQuestions[currentQuestionIndex]
+    questionElement.textContent = currentQuestion.question;
+
+    optionsElement.innerHTML = "";
+
+    for (const optionKey  in currentQuestion.answer) {
+        if (currentQuestion.answer.hasOwnProperty(optionKey)) {
+            const option = currentQuestion.answer[optionKey]
+
+            const optionElement = document.createElement("input");
+            optionElement.type = "radio";
+            optionElement.name = "answer";
+            optionElement.value = optionKey;
+            optionsElement.appendChild(optionElement);
+
+            const label = document.createElement("label")
+            label.textContent = `${optionKey.toUpperCase()}. ${option}`;
+            optionsElement.appendChild(label);
+            optionsElement.appendChild(document.createElement("br"))
         }
     }
-    // Display the score
-    scorecontainer.innerHTML = numberOfCorrectAnswers + "/" + questions.length;
 }
+
+function submitAnswer() {
+    const selectedOptionKey = document.querySelector('input[name="answer"]:checked');
+    const userAnswer = selectedOptionKey ? selectedOptionKey.value : null;
+
+    if (userAnswer === null) {
+        alert("Please select an answer.")
+    }
+
+    const currentQuestion = mathQuestions[currentQuestionIndex];
+
+    if (currentQuestion.rightAnswer === userAnswer) {
+        userScore++;
+    }
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < mathQuestions.length){
+        renderQuestion();
+    } else {
+        alert("End of Question");
+        displayResults();
+    }
+}
+
+function displayResults() {
+    // document.getElementById("question-container").hidden = true
+    // document.getElementById("result-container").hidden = false
+
+    document.getElementById("question-container").style.display = "none";
+    resultContainer.style.display = "block";
+    userScoreDisplay.textContent = `Your score: ${userScore}/${mathQuestions.length}`;
+    mathQuestions.forEach((question, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${index + 1}. ${question.question} - Correct Answer: ${question.answer[question.rightAnswer]}`;
+        resultList.appendChild(listItem);;
+    });
+}
+
 //call to the dsiplay question function
-displayQuestions(mathQuestions, quizContainer);
-submitButton.addEventListener("click", function () {
-    displayResults(questions, quizcontainer, scorecontainer) ;
-});
+renderQuestion();
+submitButton.addEventListener("click", submitAnswer)

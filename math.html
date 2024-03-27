@@ -22,14 +22,26 @@
 
       </header>
       <section>
-        <h1>Select Questions</h1>
-    </section>
-    <div id="main-quiz">
+    <!-- <div id="main-quiz">
       <div id="score">0/0</div>
       <div id="quiz"></div>
       <button  data-type="math" onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
       <div id="randi"></div>
+    </div> -->
+
+    <div id="question-container">
+    <h1>Select Questions</h1>
+      <div id="question"></div>
+      <div id="options"></div>
+      <button id="submit-btn">Submit</button>
     </div>
-      <script src="assets/js/math.js"></script>
+
+    <div id="result-container" style="display: none;">
+      <h2>Results</h2>
+      <p id="user-score"></p>
+      <ul id="result-list" style="list-style-type: none; padding: 0; margin: 20px auto; width: 80%; text-align: left;"></ul>
+    </div>
+  </section>
+  <script src="assets/js/math.js"></script>
 </body>
 </html>
