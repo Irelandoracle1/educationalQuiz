@@ -21,15 +21,79 @@
       </ul>
       </header>
       <section>
-        <h1>Select Questions</h1>
-    </section>
-    <div id="main-quiz">
-      <div id="score">0/0</div>
-      <div id="quiz"></div>
-      <button data-type="literary" onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
-      <div id="randi"></div>
-    </div>
 
-      <script src="assets/js/literary.js"></script>
+        <div id="question-container">
+        <h1>Select Questions</h1>
+          <div id="question"></div>
+          <div id="options"></div>
+          <button id="submit-btn">Submit</button>
+        </div>
+    
+        <div id="result-container" style="display: none;">
+          <h2>Results</h2>
+          <p id="user-score"></p>
+          <ul id="result-list" style="list-style-type: none; padding: 0; margin: 20px auto; width: 80%; text-align: left;"></ul>
+        </div>
+      </section>
+   
+    <script src="assets/js/script.js"></script>
+      <script>
+        let literaryQuestions = [
+    {
+        question: "What is the occupation of the protagonist Guy Montag in Ray Bradburys Fahrenheit 451",
+        answer: {
+            a: "Fisherman",
+            b: "Fireman",
+            c: "Dentist",
+            d: "Doctor"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "In what year was Of Mice and Men published",
+        answer: {
+            a: "1922",
+            b: "1935",
+            c: "1807",
+            d: "1937"
+        },
+        rightAnswer: "d"
+    },
+    {
+        question: "What classic written by Homer relates the adventures and life of Odysseus",
+        answer: {
+            a: "The Odyssey",
+            b: "The Wagos",
+            c: "The Beetles",
+            d: "The Ark"
+        },
+        rightAnswer: "a"
+    },
+    {
+        question: "How many of Ernest Hemingways ten novels were published posthumously",
+        answer: {
+            a: "Five",
+            b: "Seven",
+            c: "Three",
+            d: "Twenty"
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "John Keats wrote what poem to a singing bird",
+        answer: {
+            a: "The Kaftans",
+            b: "Ode to A Nightingale",
+            c: "Ode to A Night",
+            d: "Ode to A gale"
+        },
+        rightAnswer: "b"
+    },
+
+];
+        
+questionnaire(literaryQuestions);
+      </script>
+      
 </body>
 </html>

@@ -20,14 +20,73 @@
       </ul>
       </header>
       <section>
+        <div id="question-container">
         <h1>Select Questions</h1>
-    </section>
-    <div id="main-quiz">
-      <div id="score">0/0</div>
-      <div id="quiz"></div>
-      <button data-type="science" onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
-      <div id="randi"></div>
-    </div>
-      <script src="assets/js/science.js"></script>
+          <div id="question"></div>
+          <div id="options"></div>
+          <button id="submit-btn">Submit</button>
+        </div>
+    
+        <div id="result-container" style="display: none;">
+          <h2>Results</h2>
+          <p id="user-score"></p>
+          <ul id="result-list" style="list-style-type: none; padding: 0; margin: 20px auto; width: 80%; text-align: left;"></ul>
+        </div>
+      </section>
+      <script src="assets/js/script.js"></script>
+      <script>
+        let scienceQuestions = [
+    {
+        question: "How many bones are in the human body?",
+        answer: {
+            a: 206,
+            b: 80,
+            c: 209,
+            d: 399
+        },
+        rightAnswer: "a"
+    },
+    {
+        question: "Which famous British physicist wrote A Brief History of Time?",
+        answer: {
+            a: "oracle john",
+            b: "Stephen Hawking",
+            c: "Godwin stallion",
+            d: "Lucad samuel"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "Which Apollo moon mission was the first to carry a lunar rover?",
+        answer: {
+            a: "Apollo 1",
+            b: "Apollo 19",
+            c: "Apollo 17",
+            d: "Apollo 15"
+        },
+        rightAnswer: "d"
+    },
+    {
+        question: "Which oath of ethics taken by doctors is named after an Ancient Greek physician?",
+        answer: {
+            a: "Frank Whittle",
+            b: "Sans Adams",
+            c: "Hippocratic Oath",
+            d: "Gaay core"
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "What modern day country was Marie Curie born in",
+        answer: {
+            a: "Poland",
+            b: "France",
+            c: "Norway",
+            d: "Nigeria"
+        },
+        rightAnswer: "a"
+    }];
+    questionnaire(scienceQuestions);
+      </script>
 </body>
 </html>

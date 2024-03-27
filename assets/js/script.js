@@ -61,7 +61,7 @@ function questionnaire(questions) {
         }
     
         
-        if (currentQuestionIndex < mathQuestions.length){
+        if (currentQuestionIndex < questions.length){
             renderQuestion();
         } else {
             alert("End of Question");

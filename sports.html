@@ -18,17 +18,78 @@
           <li class="literary"> <a href="literary.html">LITERARY</a><i class="fa-solid fa-book"></i></li>
           <li class="sports"><a href="sports.html">SPORTS</a><i class="fa-solid fa-medal"></i></li>
       </ul>
-      </header>
-      <section>
-        <h1>Select Questions</h1>
-    </section>
-    <div id="main-quiz">
-      <div id="score">0/0</div>
-      <div id="quiz"></div>
-      <button data-type="sports" onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
-      <div id="randi"></div>
-    </div>
+    </header>
+        <section>
 
-      <script src="assets/js/sports.js"></script>
+          <div id="question-container">
+          <h1>Select Questions</h1>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="submit-btn">Submit</button>
+          </div>
+      
+          <div id="result-container" style="display: none;">
+            <h2>Results</h2>
+            <p id="user-score"></p>
+            <ul id="result-list" style="list-style-type: none; padding: 0; margin: 20px auto; width: 80%; text-align: left;"></ul>
+          </div>
+        </section>
+      <script src="assets/js/script.js"></script>
+      <script>
+        let sportQuestions = [
+    {
+        question: "Jurgen Klopp began his manegeral career at which German club",
+        answer: {
+            a: "Mainz 05",
+            b: "Mainz 07",
+            c: "Main 10",
+            d: "Main 08"
+        },
+        rightAnswer: "a"
+    },
+    {
+        question: "Which England footballer was famously never given a yellow card",
+        answer: {
+            a: "Paul Sholes",
+            b: "Gary Lineker",
+            c: "David Beckham",
+            d: "lukaka kalu"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "After retiring from professional cycling what other sport did Bradley Wiggins briefly attempt to make a career in",
+        answer: {
+            a: "Soccer",
+            b: "Basketball",
+            c: "Volley ball",
+            d: "Rowing"
+        },
+        rightAnswer: "d"
+    },
+    {
+        question: "The Chicago Cubs and Boston Red Sox play which sport",
+        answer: {
+            a: "Rugby",
+            b: "Soccer",
+            C: "Basketball",
+            d: "Baseball"
+        },
+        rightAnswer: "d"
+    },
+    {
+        question: "England won the 2003 Rugby World Cup thanks to an iconic drop goal from Jonny Wilkinson. How many points did England score in the match",
+        answer: {
+            a: "20",
+            b: "22",
+            c: "29",
+            d: "30"
+        },
+        rightAnswer: "a"
+    },
+];
+questionnaire(sportQuestions);
+      </script>
+
 </body>
 </html>

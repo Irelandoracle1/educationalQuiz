@@ -21,15 +21,75 @@
       </ul>
       </header>
       <section>
-        <h1>Select Questions</h1>
-    </section>
-    <div id="main-quiz">
-      <div id="score">0/0</div>
-      <div id="quiz"></div>
-      <button data-type="geography" onclick="displayResults(mathQuestions, quizContainer, scoreContainer)" id="submit">Get Quiz Result</button>
-      <div id="randi"></div>
-    </div>
+          <div id="question-container">
+          <h1>Select Questions</h1>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="submit-btn">Submit</button>
+          </div>
+      
+          <div id="result-container" style="display: none;">
+            <h2>Results</h2>
+            <p id="user-score"></p>
+            <ul id="result-list" style="list-style-type: none; padding: 0; margin: 20px auto; width: 80%; text-align: left;"></ul>
+          </div>
+        </section>
 
-      <script src="assets/js/geography.js"></script>
+      <script src="assets/js/script.js"></script>
+      <script>
+        let geoQuestions = [
+    {
+        question: "What is the smallest county in the island of Ireland",
+        answer: {
+            a: "County Carlow",
+            b: "County Dublin",
+            c: "County  Louth",
+            d: "County Cork",
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "Which of these is Ireland longest river",
+        answer: {
+            a: "River dommy",
+            b: "river shannon",
+            c: "River Liffey",
+            d: "River Bendel"
+        },
+        rightAnswer: "b"
+    },
+    {
+        question: "Which county in Ireland takes its name from the Vikings",
+        answer: {
+            a: "County cork",
+            b: "County Dublin",
+            c: "County Waterford",
+            d: "County Sligo"
+        },
+        rightAnswer: "c"
+    },
+    {
+        question: "What county is river Garavogue",
+        answer: {
+            a: "Drogeda",
+            b: "Galway",
+            c: "Dublin",
+            d: "Sligo"
+        },
+        rightAnswer: "d"
+    },
+    {
+        question: "The majestic Mourne Mountains are an Area of Outstanding Natural Beauty Which writer was inspired by this magical landscape",
+        answer: {
+            a: "Seamus Heaney",
+            b: "James Joyce",
+            c: "CS Lewis",
+            d: "WB Yeats"
+        },
+        rightAnswer: "d"
+    },
+];
+questionnaire(geoQuestions);
+      </script>
 </body>
 </html>
